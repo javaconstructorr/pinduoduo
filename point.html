@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>一元购我的积分</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="stylesheet" href="css/light7.css">
+    <link rel="stylesheet" href="css/light7-swiper.css">
+    <link rel="stylesheet" href="css/base.css">
+    <style type="text/css">
+
+    </style>
+  </head>
+  <body>
+    <!-- 你的html代码 -->
+    <div class="page">
+      <div class="content infinite-scroll infinite-scroll-bottom" data-distance="100">
+        <!-- 这里是页面内容区 -->
+        <div class="points-title">
+          <div id="caseBlanche">
+            <div id="rond">
+              <div id="point"></div>
+            </div>
+            <div id="now-point">
+              <p>当前积分</p>
+              <h1 id="myTargetElement" class="jumbo" data-to="5452"></h1>
+            </div>
+          </div>
+          <div class="history-point clearfix">
+            <div>
+              <div>
+              <p>总积分</p>
+              <p id="myTargetElement2" class="jumbo2" data-to="15424"></p>
+              </div>
+            </div>
+            <div>
+              <div>
+              <p>已用积分</p>
+              <p id="myTargetElement3" class="jumbo3" data-to="2145"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="points-list">
+          <div>账单</div>
+          <ul>
+            <li><span>2015-02-26</span><span>二等奖返积分<i>20</i></span></li>
+            <li><span>2015-02-26</span><span>二等奖返积分<i>20</i></span></li>
+            <li><span>2015-02-26</span><span>二等奖返积分<i>20</i></span></li>
+            <li><span>2015-02-26</span><span>二等奖返积分<i>20</i></span></li>
+            <li><span>2015-02-26</span><span>二等奖返积分<i>20</i></span></li>
+            <li><span>2015-02-26</span><span>二等奖返积分<i>20</i></span></li>
+            <li><span>2015-02-26</span><span>二等奖返积分<i>20</i></span></li>
+            <li><span>2015-02-26</span><span>二等奖返积分<i>20</i></span></li>
+            <li><span>2015-02-26</span><span>二等奖返积分<i>20</i></span></li>
+          </ul>
+        </div>
+        <div class="infinite-scroll-preloader" style="display:none;">
+            <p style="margin:0 auto;padding:5px 0;;font-size:10px;">向上滑动查看更多</p>
+            <div class="preloader"></div>
+        </div>
+
+      </div>
+    </div>
+    <!-- html结束 -->
+    <script type='text/javascript' src='js/jquery.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='js/light7.js' charset='utf-8'></script>
+    <script type='text/javascript' src='js/light7-swiper.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='js/base-widget.js' charset='utf-8'></script>
+    <script type='text/javascript' src="js/countUp.js" charset='utf-8'></script>
+
+    <script type="text/javascript">
+      $(function(){
+        $.init();
+        counttp();
+        if ($(".points-list li").length >= 10) {
+          $('.infinite-scroll-preloader').show();
+        }else{
+          $(".points-list").append("<p class='order-bottom-tip'>已经没有更多信息了</p>");
+        }
+      })
+      var loading = false;
+      $(document).on('infinite', '.infinite-scroll-bottom',function() {
+            // 如果正在加载，则退出
+            if (loading) return;
+
+            // 设置flag
+            loading = true;
+
+            // 模拟1s的加载过程
+            setTimeout(function() {
+                // 重置加载flag
+                loading = false;
+                /*----------------------页面下滑后会执行的内容--------------------------*/
+                /*$.ajax({
+                    type:"POST",
+                    url:"date/winner.json",
+                    dataType: "json",
+                    success:方法,
+                    error: function(){
+                       console.log(XMLHttpRequest.readyState);
+                    }
+                })*/
+                if ($(".points-list li").length < 10) {           //下拉刷新时如果页面中的条数小于10条就不执行
+                  $.detachInfiniteScroll($('.infinite-scroll'));
+                  $('.infinite-scroll-preloader').remove();
+                  return;
+                }
+                /*---------------------------------------------------*/
+            }, 1000);
+        });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>一元购收货地址</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="stylesheet" href="css/light7.css">
+    <link rel="stylesheet" href="css/light7-swiper.css">
+    <link rel="stylesheet" href="css/base.css">
+    <style type="text/css">
+
+    </style>
+  </head>
+  <body>
+    <!-- 你的html代码 -->
+    <div class="page">
+      <div class="content">
+        <!-- 这里是页面内容区 -->
+        <form id="ar-sub" action="" method="get">
+          <div class="list-block mycenter">
+            <ul class="add-addresslist">
+              <li class="item-content item-link">
+                <div class="item-media">联系人</div>
+                <input name="y-name" class="check-Nan" type="text" placeholder="你的名字">
+              </li>
+              <li class="item-content item-link">
+                <div class="gender" style="">
+                  <label class="label-checkbox">
+                    <input type="radio" name="my-sex" value="1" checked="checked">
+                    <div class="item-media" style=""><i class="icon icon-form-checkbox"></i>男</div>
+                  </label>
+                  <label class="label-checkbox">
+                    <input type="radio" name="my-sex" value="2">
+                    <div class="item-media" style=""><i class="icon icon-form-checkbox"></i>女</div>
+                  </label>
+                </div>
+              </li>
+              <li class="item-content item-link">
+                <div class="item-media">联系电话</div>
+                <input name="y-pho" class="check-Nan check-num" maxLength="11" type="text" placeholder="你的手机号">
+              </li>
+              <li class="item-content item-link">
+                <div class="item-media">收货地址</div>
+                <input name="y-city" class="check-Nan" type="text" id="city-picker" placeholder="省/市/区" value="  ">
+              </li>
+              <li class="item-content item-link">
+                <textarea name="y-rod" class="check-Nan" placeholder="详细地址（小区/路/门牌号等）"></textarea>
+            </li>
+          </ul>
+          <div class="ad-confirm-add"><a class="external" href='javascript:void(0);' onclick='checkNan();'>确定</a></div>
+        </div>
+        </form>
+      </div>
+    </div>
+    <!-- html结束 -->
+    <script type='text/javascript' src='js/jquery.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='js/light7.js' charset='utf-8'></script>
+    <script type='text/javascript' src='js/light7-swiper.min.js' charset='utf-8'></script>
+    <script type="text/javascript" src="js/light7-city-picker.min.js" charset="utf-8"></script>
+    <script type='text/javascript' src='js/base-widget.js' charset='utf-8'></script>
+
+    <script type="text/javascript">
+      $(function(){
+        $.init();
+        $("#city-picker").cityPicker({
+          toolbarTemplate: '<header class="bar bar-nav">\
+          <button class="button button-link pull-right close-picker">确定</button>\
+          <h1 class="title">选择收货地址</h1>\
+          </header>'
+        });
+      })
+
+
+    </script>
+  </body>
+</html>

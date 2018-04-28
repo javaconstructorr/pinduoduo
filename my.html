@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>一元购我的</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="stylesheet" href="css/light7.css">
+    <link rel="stylesheet" href="css/light7-swiper.css">
+    <link rel="stylesheet" href="css/base.css">
+  </head>
+  <body>
+    <!-- 你的html代码 -->
+    <div class="page">
+      <nav class="bar bar-tab">
+        <a class="tab-item external" href="index.html">
+          <span class="icon"><i class="ind"></i></span>
+          <span class="tab-label">首页</span>
+        </a>
+        <a class="tab-item external" href="rank.html">
+          <span class="icon"><i class="rank"></i></span>
+          <span class="tab-label">排行榜</span>
+        </a>
+        <a class="tab-item external" href="showpro.html">
+          <span class="icon"><i class="show"></i></span>
+          <span class="tab-label">晒单</span>
+        </a>
+        <a class="tab-item external active" href="my.html">
+          <span class="icon"><i class="me"></i></span>
+          <span class="tab-label">我的</span>
+        </a>
+      </nav>
+      <div class="content">
+        <!-- 这里是页面内容区 -->
+        <div class="logindiv">
+          <div>
+            <p>我的</p>
+            <img src="img/default-head.png">
+            <p>未登录</p>
+          </div>
+        </div>
+        <div class="list-block mycenter">
+          <ul class="allorder">
+            <a class="external" href="myorder.html">
+              <li class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">全部订单</div>
+                </div>
+              </li>
+            </a>
+          </ul>
+          <nav class="mynav">
+            <a class="mynav-item external" href="mygroup.html?tabid=1">
+              <span class="icon"><i class="ptz"></i></span>
+              <span class="tab-label">拼团中</span>
+            </a>
+            <a class="mynav-item external" href="mygroup.html?tabid=2">
+              <span class="icon"><i class="dfh"></i></span>
+              <span class="tab-label">待发货</span>
+            </a>
+            <a class="mynav-item external" href="mygroup.html?tabid=2">
+              <span class="icon"><i class="dsh"></i></span>
+              <span class="tab-label">待收货</span>
+            </a>
+            <a class="mynav-item external" href="mygroup.html?tabid=3">
+              <span class="icon"><i class="sh"></i></span>
+              <span class="tab-label">退款/售后</span>
+            </a>
+          </nav>
+          <ul class="myother">
+            <li class="item-content item-link">
+              <div class="item-media"><i class="icon m221"></i></div>
+              <a href="http://baidu.com" class="item-inner external">
+                <div class="item-title">我的消息</div>
+              </a>
+            </li>
+            <li class="item-content item-link">
+              <div class="item-media"><i class="icon m222"></i></div>
+              <a href="http://baidu.com" class="item-inner external">
+                <div class="item-title">我的积分</div>
+              </a>
+            </li>
+            <li class="item-content item-link">
+              <div class="item-media"><i class="icon m223"></i></div>
+              <a href="address.html" class="item-inner external">
+                <div class="item-title">收货地址</div>
+              </a>
+            </li>
+            <li class="item-content item-link">
+              <div class="item-media"><i class="icon m224"></i></div>
+              <a href="http://baidu.com" class="item-inner external">
+                <div class="item-title">常见问题</div>
+              </a>
+            </li>
+          </ul>
+          <button type="button" onclick="wufeng()">12312312</button>
+        </div>
+      </div>
+    </div>
+    <!-- html结束 -->
+    <script type='text/javascript' src='js/jquery.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='js/light7.js' charset='utf-8'></script>
+    <script type='text/javascript' src='js/light7-swiper.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='js/base-widget.js' charset='utf-8'></script>
+
+    <script type="text/javascript">
+      $(function(){
+        $.init();
+      })
+			function wufeng(){
+      	var info = {
+				'messageType':'EmployeeLoginRequest',
+				'employee':{
+					'type':'1',
+					'name':'1',
+					'password':'1'
+				}
+				
+			}
+			var dataa = JSON.stringify(info);
+			console.log(dataa);
+      	$.ajax({
+  				type:"post",
+  				url:"http://192.168.188.109:8080/api/user/employeeLogin",
+  				contentType:'application/json',
+  				data:dataa,//声明arr
+  				success:function(data){
+  					console.log(data);
+  					
+  				},
+  				error:function(){
+  					console.log("系统异常");
+  				}
+  			})
+      }
+    </script>
+  </body>
+</html>

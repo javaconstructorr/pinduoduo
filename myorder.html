@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>一元购我的订单</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="stylesheet" href="css/light7.css">
+    <link rel="stylesheet" href="css/light7-swiper.css">
+    <link rel="stylesheet" href="css/base.css">
+  </head>
+  <body>
+    <!-- 你的html代码 -->
+    <div class="page">
+      <div class="content">
+        <!-- 这里是页面内容区 -->
+        <div class="buttons-tab my-tab">
+          <a href="#allorder" class="tab-link active button">全部</a>
+          <a href="#o-waitpay" class="tab-link button">待付款</a>
+          <a href="#o-readeypay" class="tab-link button">已付款</a>
+          <a href="#o-waitdelivery" class="tab-link button">待发货</a>
+          <a href="#o-waitreceiving" class="tab-link button">待收货</a>
+        </div>
+        <div class="content-block">
+          <div class="tabs">
+            <div id="allorder" class="tab active">
+              <div class="content-block">
+
+                <div class="list-block media-list order-check">
+                  <ul>
+                    <li>
+                      <a href="prodetail.html" class="item-link item-content external">
+                        <div class="item-media"><img src="img/p-test.png"></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title">西门子/SIEMENS 7.5公斤洗干一体机 洗干一体机</div>
+                            <div class="item-after group-state"><span>待付款</span></div>
+                          </div>
+                          <div class="item-text">实付：<span style="font-size:0.65rem;padding:0;margin:0;">1￥</span>(免运费)</div>
+                        </div>
+                      </a>
+                      <p class="order-ctl">
+                        <a class="external" href='javascript:void(0);' onclick='destroyorder()'>取消订单</a>
+                        <a class="external onfocus" href="mytakeorder.html">去支付</a>
+                      </p>
+                    </li>
+                    <li>
+                      <a href="prodetail.html" class="item-link item-content external">
+                        <div class="item-media"><img src="img/p-test.png"></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title">西门子/SIEMENS 7.5公斤洗干一体机 洗干一体机</div>
+                            <div class="item-after group-state"><span>已付款</span></div>
+                          </div>
+                          <div class="item-text">实付：<span style="font-size:0.65rem;padding:0;margin:0;">1￥</span>(免运费)</div>
+                        </div>
+                      </a>
+                      <p class="order-ctl">
+                        <a class="external" href="myorderdetail.html">查看订单详情</a>
+                        <a class="external onfocus" href="mygroupdetail.html">邀请好友拼团</a>
+                      </p>
+                    </li>
+                  </ul>
+                  <p class="order-bottom-tip">您已经没有更多订单了</p>
+                </div>
+
+              </div>
+            </div>
+            <div id="o-waitpay" class="tab">
+              <div class="content-block">
+
+                <div class="list-block media-list order-check">
+                  <ul>
+                    <li>
+                      <a href="prodetail.html" class="item-link item-content external">
+                        <div class="item-media"><img src="img/p-test.png"></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title">西门子/SIEMENS 7.5公斤洗干一体机 洗干一体机</div>
+                            <div class="item-after group-state"><span>待付款</span></div>
+                          </div>
+                          <div class="item-text">实付：1￥(免运费)</div>
+                        </div>
+                      </a>
+                      <p class="order-ctl">
+                        <a class="external" href='javascript:void(0);' onclick='destroyorder()'>取消订单</a>
+                        <a class="external onfocus" href="mytakeorder.html">去支付</a>
+                      </p>
+                    </li>
+                  </ul>
+                  <p class="order-bottom-tip">您已经没有更多订单了</p>
+                </div>
+
+              </div>
+            </div>
+            <div id="o-readeypay" class="tab">
+              <div class="content-block">
+
+                <div class="list-block media-list order-check">
+                  <ul>
+                    <li>
+                      <a href="prodetail.html" class="item-link item-content external">
+                        <div class="item-media"><img src="img/p-test.png"></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title">西门子/SIEMENS 7.5公斤洗干一体机 洗干一体机</div>
+                            <div class="item-after group-state"><span>已付款</span></div>
+                          </div>
+                          <div class="item-text">实付：<span style="font-size:0.65rem;padding:0;margin:0;">1￥</span>(免运费)</div>
+                        </div>
+                      </a>
+                      <p class="order-ctl">
+                        <a class="external" href="myorderdetail.html">查看订单详情</a>
+                        <a class="external onfocus" href="mygroupdetail.html">邀请好友拼团</a>
+                      </p>
+                    </li>
+                  </ul>
+                  <p class="order-bottom-tip">您已经没有更多订单了</p>
+                </div>
+
+              </div>
+            </div>
+            <div id="o-waitdelivery" class="tab">
+              <div class="content-block">
+
+                <div class="list-block media-list order-check">
+                  <ul>
+                  </ul>
+                  <p class="order-bottom-tip">您已经没有更多订单了</p>
+                </div>
+
+              </div>
+            </div>
+            <div id="o-waitreceiving" class="tab">
+              <div class="content-block">
+
+                <div class="list-block media-list order-check">
+                  <ul>
+
+                  </ul>
+                  <p class="order-bottom-tip">您已经没有更多订单了</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- html结束 -->
+    <script type='text/javascript' src='js/jquery.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='js/light7.js' charset='utf-8'></script>
+    <script type='text/javascript' src='js/light7-swiper.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='js/base-widget.js' charset='utf-8'></script>
+
+    <script type="text/javascript">
+      $(function(){
+        $.init();
+        /**/
+        tchecktabid();
+        /**/
+      })
+
+      function destroyorder(){
+        $.confirm('确认取消订单?',
+          function () {
+              $.toast("订单被取消");
+              setTimeout(function(){window.location.reload();},2000);
+          },
+          function () {
+              console.log("123");
+          }
+        );
+      }
+    </script>
+  </body>
+</html>
