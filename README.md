@@ -1,6 +1,6 @@
 # 一个仿拼多多的项目
 
-> 用light7做ui框架，本地json造假。做一半就停了。
+> 用light7做ui框架，本地json造假。做一半就停了。   
 
 ![1](https://github.com/wufeng110226/pinduoduo/blob/master/img/gitimg/1.jpg)
 ![2](https://github.com/wufeng110226/pinduoduo/blob/master/img/gitimg/2.jpg)
